@@ -1,0 +1,144 @@
+.node-editor {
+  width: 320px;
+  height: 100vh;
+  background: #181818;
+  color: #fff;
+  border-left: 1px solid #323232;
+  padding: 18px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.node-editor.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.editor-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2e2e2e;
+  margin-bottom: 15px;
+}
+
+.editor-header h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #4fc3f7;
+}
+
+.editor-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.editor-section {
+  background: #202020;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editor-section label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.editor-section input,
+.editor-section select,
+.editor-section textarea {
+  width: 100%;
+  padding: 9px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.editor-section textarea {
+  height: 70px;
+  resize: none;
+}
+
+.meta-row {
+  display: flex;
+  gap: 6px;
+}
+
+.add-btn {
+  margin-top: 8px;
+  padding: 8px;
+  background: #4fc3f7;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+.add-btn:hover {
+  background: #6dd9ff;
+}
+
+.editor-input-block span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.node-editor {
+  width: 320px;
+  height: 100vh;
+  background: #181818;
+  color: #fff;
+  border-left: 1px solid #323232;
+  padding: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;   /* ✅ Fix horizontal overflow */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-section {
+  background: #202020;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;          /* ✅ Ensure exact width */
+  box-sizing: border-box;
+}
+
+.editor-section input,
+.editor-section select,
+.editor-section textarea {
+  width: 100%;          /* ✅ Prevent overflow */
+  box-sizing: border-box;
+}
+
+.meta-row {
+  display: flex;
+  gap: 6px;
+  width: 100%;          /* ✅ Fix row overflow */
+}
+
+.meta-row input {
+  flex: 1;              /* Equal width fields */
+}

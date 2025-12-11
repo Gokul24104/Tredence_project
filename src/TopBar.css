@@ -1,0 +1,64 @@
+.topbar {
+  height: 54px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.topbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #2d2d2d;
+  border: 1px solid #3a3a3a;
+  color: #ddd;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.topbar-btn:hover {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+}
+
+.topbar-btn:active {
+  transform: scale(0.96);
+}
+
+.topbar-btn.run {
+  background: #4fc3f7;
+  border-color: #4fc3f7;
+  color: #000;
+  font-weight: 600;
+}
+
+.topbar-btn.run:hover {
+  background: #76d7ff;
+}
+
+.topbar-btn.run:active {
+  transform: scale(0.96);
+}
+/* Prevent TopBar styles from leaking globally */
+.topbar, .topbar * {
+  box-sizing: border-box;
+}
+
+/* Restore normal layout flow */
+.topbar {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Ensure it does not affect right sidebar flex layout */
+body, html, #root {
+  height: 100%;
+}
